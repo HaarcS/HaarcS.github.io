@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/registro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<header>
+    <div class="logo text-center">
+        <img src="img/Logo completo.png" class="m-3" alt="Logo" height="90px">
+    </div>
+</header>
+<body>
+    
+    <div class="container pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="login-container text-center">
+                    <h3 class="mb-3">Registrarse</h3>
+                    <hr>
+                    <form method="post" action="php/crearcuentamysql.php" onsubmit="return validarFormulario()">
+                        <div class="mb-3">
+                            <select class="form">
+                                <option value="" disabled selected>Rol</option>
+                                <option value="1">Administrador</option>
+                                <option value="2">Técnico</option>
+                                <option value="3">Cliente</option>
+                            </select>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Nombre" name="nombre" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Apellido" name="apellido" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Teléfono" name="telefono" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Email" name="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" placeholder="Contraseña" name="contrasena" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" placeholder="Confirmar contraseña" name="confirmarcontrasena" required>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-primary w-100"><a href="iniciosesion.html"></a>Registrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+      function validarFormulario() {
+          let rol = document.getElementById("rol").value;
+          let pass = document.querySelector('input[name="contrasena"]').value;
+          let passConfirm = document.querySelector('input[name="confirmarcontrasena"]').value;
+          
+
+          if (rol === "") {
+              alert("Por favor, selecciona un rol.");
+              return false;
+          }
+
+          if (pass !== passConfirm) {
+              alert("Las contraseñas no coinciden.");
+              return false;
+          }
+
+          return true;
+      }
+      
+
+      function validarTelefono(input) {
+          // Eliminar caracteres no numéricos
+          input.value = input.value.replace(/\D/g, '');
+      }
+
+          function validarRol(select) {
+          if (select.value === "") {
+              alert("Por favor, seleccione un rol.");
+              select.focus(); // Enfoca el campo para que el usuario lo corrija
+              return false; // Evita que el formulario se envíe
+          }
+          return true;
+
+      // Validar el formulario antes de enviarlo
+      document.querySelector("form").addEventListener("submit", function(event) {
+          const rol = document.getElementById("rol").value;
+          if (rol === "") {
+              alert("Por favor, seleccione un rol.");
+              event.preventDefault(); // Evita que el formulario se envíe
+          }
+      });
+
+      // PHP code should not be here, remove it
+      
+          return true;
+      }
+    </script>
+
+</body>
+<footer class="text-white mt-5" id="piePagina">
+    <div class="container py-5">
+      <div class="row">
+       
+        <div class="col-md-4 mb-4">
+          <h5>Enlaces</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="creacion.html" class="text-white text-decoration-none">Creación</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Visualización</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Soporte</a></li>
+          </ul>
+        </div>      
+       
+        <div class="col-md-4 mb-4">
+          <h5> Información de Contacto</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt"></i> Dirección: Calle 90 #12-35, Bogotá, Colombia</li>
+            <li><i class="bi bi-telephone"></i> Teléfono: +57 312 857 7856</li>
+            <li><i class="bi bi-envelope"></i> Correo: info@jataair.com</li>
+          </ul>
+        </div>     
+        
+        <div class="col-md-4 mb-4">
+          <h5>Síguenos</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/profile.php?id=61574843906898" class="text-white text-decoration-none"><i class="bi bi-facebook"></i>Facebook</a></li>
+            <li><a href="https://x.com/Softgen291521" class="text-white text-decoration-none"><i class="bi bi-twitter-x"></i></i>Twitter</a></li>
+            <li><a href="https://www.instagram.com/softg_en?igsh=amp3dmF3dzdqbWtq" class="text-white text-decoration-none"><i class="bi bi-instagram"></i></i>Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>     
+   
+    <div class="text-center py-3" id="derechos">
+      <p class="mb-0">&copy; 2025 SoftGen. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</html>

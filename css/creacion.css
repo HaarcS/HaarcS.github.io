@@ -1,0 +1,197 @@
+
+span{
+    float: inline-end;
+}
+
+header {
+    background-color: #e4f7ff;
+    height: 80px;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+body {
+    padding-top: 100px;
+    font-family: saira;
+}
+
+
+.nav-link{
+    font-family: saira;
+    text-decoration: none;
+    color: #135787;
+    background-color: #e4f7ff;
+}
+
+
+
+.nav-link:hover{
+    font-size: 20px;
+    color: #000;
+    text-decoration: underline;
+}
+
+
+#navbarNav{
+    background-color: #e4f7ff;
+}
+
+.navbar-toggler {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+body{
+    overflow-x:hidden ;
+}
+
+.card-body2{
+    background-color: #e4f7ff;
+    width: 287px;
+    font-family: saira;
+}
+
+i{
+    transition: transform 0.3s ease;
+}
+
+i:hover{
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+.btn-primary{
+    transition: transform 2.0 ease;
+    display: flex;
+    font-family: saira;
+}
+
+.btn-primary:hover{
+    transform: scale(1.08);
+}
+
+.container-fluid{
+    margin-bottom: 0px;
+}
+
+ol{
+    margin: 10px;
+}
+
+#cuerpo{
+    background-color: rgba(225, 225, 225, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(225, 225, 225, 0.3);
+    padding: 20px;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.1);
+    font-family: saira;
+}
+
+
+.franja-colorida {
+    height:60px;       /* Grosor */
+    background-color:#135787;
+    border: none;      /* Elimina el borde por defecto */
+    margin: 20px 0;
+    color: white;    /* Espaciado vertical */
+    font-family: saira;
+  }
+
+
+.card{
+    margin: 10px;
+    font-family: saira;
+}
+
+.card-body{
+    background-color: black;
+    font-family: saira;
+}
+
+.carousel-control-prev-icon{
+    background-color: black;
+}
+.carousel-control-next-icon{
+    background-color: black;
+}
+
+.card-img-top{
+    width: 100px;
+    height: 300px;
+}
+
+
+
+#herramienta{
+    justify-content: center;
+}
+
+
+/* Fondo con degradado */
+#piePagina {
+    background: linear-gradient(45deg, #135787, #1982c4);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    font-family: saira;
+}
+
+/* Estilo para los títulos del footer */
+#piePagina h5 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Espaciado entre los elementos de la lista */
+#piePagina ul {
+    padding: 0;
+    list-style: none;
+}
+
+#piePagina ul li {
+    margin: 8px 0;
+}
+
+/* Enlaces del footer */
+#piePagina a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+#piePagina a:hover {
+    color: #ffcc00; /* Amarillo suave */
+    text-decoration: underline;
+}
+
+/* Íconos más grandes y con efecto */
+#piePagina i {
+    font-size: 1.3rem;
+    margin-right: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#piePagina a:hover i {
+    transform: scale(1.2);
+}
+
+/* Separación entre las secciones */
+#piePagina .col-md-4 {
+    margin-bottom: 20px;
+}
+
+/* Línea superior para separar derechos de autor */
+#derechos {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    font-size: 0.9rem;
+}
+

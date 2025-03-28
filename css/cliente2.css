@@ -1,0 +1,35 @@
+
+.left-col{
+    width: 40%;
+    height: 800px;
+    background-color: #135787;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+}
+
+.right-col{
+    width: 60%;
+    height: 800px;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+
+}
+
+.rebote{
+    animation: rebote 1.5s ease-in-out infinite alternate;
+}
+@keyframes rebote {
+    0% {
+      transform: translateY(0); /* Posición inicial */
+    }
+    100% {
+      transform: translateY(-30px); /* Altura del rebote (ajústala) */
+    }
+  }
+
+.rebote:hover{
+    animation-duration:0.5s ;
+    animation-timing-function: ease-out;
+}
